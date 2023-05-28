@@ -1,0 +1,20 @@
+[default.general]
+chip = "STM32F411VETx"
+
+[default.reset]
+halt_afterwards = false
+
+[default.gdb]
+enabled = false
+
+[default.rtt]
+enabled = false
+
+[with_rtt.rtt]
+enabled = true
+
+[with_gdb.gdb]
+enabled = true
+
+[with_gdb.reset]
+halt_afterwards = true

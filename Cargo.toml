@@ -1,0 +1,27 @@
+[package]
+name = "stm32f411e-disco"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+embedded-hal = "0.2.7"
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.3"
+
+panic-halt = "0.2.0"
+rtt-target = "0.4.0"
+panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
+
+#gyroscope
+l3gd20 = "0.3.0"
+#accelerometer + magnetometer
+lsm303dlhc = "0.2.0"
+#usb related crates
+usb-device = "0.2.9"
+usbd-serial = "0.1.1"
+
+[dependencies.stm32f4xx-hal]
+version = "0.16.0"
+features = ["stm32f411", "usb_fs"]
